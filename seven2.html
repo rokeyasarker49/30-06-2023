@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
-              
+        
+                
                 .mobile-container {
                   max-width: 480px;
                   margin: auto;
@@ -28,19 +29,15 @@
                 }
                 
                 .topnav a {
+                  float: left;
                   color: white;
                   padding: 14px 16px;
                   text-decoration: none;
                   font-size: 17px;
-                  display: block;
                 }
                 
                 .topnav a.icon {
-                  background: black;
-                  display: block;
-                  position: absolute;
-                  right: 0;
-                  top: 0;
+                  float: right;
                 }
                 
                 .topnav a:hover {
@@ -49,14 +46,15 @@
                 }
                 
                 .active {
-                  background-color: #d7ca78;
+                  background-color: #dadb91;
                   color: white;
                 }
-        </style>
+         </style>
 </head>
 <body>
         <div class="mobile-container">
 
+                
                 <div class="topnav">
                   <a href="#home" class="active">Logo</a>
                   <div id="myLinks">
@@ -70,11 +68,13 @@
                 </div>
                 
                 <div style="padding-left:16px">
-                  <h3>Vertical Mobile Navbar</h3>
+                  <h3>Horizontal Mobile Navbar</h3>
                   <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
                   <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+                  <p><strong>Note that this example should'nt be used if you have a lot of links, as they will "break" the navbar when there's too many (especially on very small screens).</strong></p>
                 </div>
-
+                
+                
         </div>
 
         <script>
@@ -87,5 +87,7 @@
                   }
                 }
         </script>
+                
+                
 </body>
 </html>

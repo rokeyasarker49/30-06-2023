@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+                .sidebar {
+                        height: 100%;
+                        width: 0;
+                        background-color: antiquewhite;
+                        padding-top: 57px;
+                        z-index: 1;
+                        top: 0;
+                        left:0 ;
+                        position: fixed;
+                        overflow-x: hidden;
+                        transition: 0.5s;
+                }
+
+                .sidebar a {
+                        text-decoration: none;
+                        font-size: 25px;
+                        color: rgb(66, 47, 66);
+                        padding: 10px;
+                        display: block;
+                        transition: 0.3s;
+
+                }
+
+                .sidebar a:hover {
+                        
+                        color: rgb(214, 172, 99);
+
+                }
+
+                .sidebar .closebtn {
+                        font-size: 35px;
+                        right: 25px;
+                        top: 0;
+                        position: absolute;
+                        margin-left: 50px;
+
+                }
+
+                .openbtn {
+                        cursor: pointer;
+                        background-color: rgb(104, 48, 48);
+                        color: aliceblue;
+                        padding: 15px;
+                        border: none;
+                        font-size: 25px;
+                }
+
+                .opentbn:hover{
+                        background-color: black;
+                }
+                #main {
+                        padding: 22px;
+                       
+                }
+
+        </style>
+</head>
+<body>
+        <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times</a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+        </div>
+
+        <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+                <h2>Collapsed Sidebar</h2>
+                <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+        </div>
+
+        <script>
+                function openNav() {
+                        document.getElementById("mySidebar").style.width = "250px";
+                        document.getElementById("main").style.marginLeft = "250px";
+                }
+
+
+                function closeNav() {
+                        document.getElementById("mySidebar").style.width = "0";
+                        document.getElementById("main").style.marginLeft = "0";
+                }
+        </script>
+              
+</body>
+</html>

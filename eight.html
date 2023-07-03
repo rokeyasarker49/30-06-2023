@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+                .overlay {
+                       position: fixed; 
+                       z-index: 1;
+                       left: 0;
+                       top: 0;
+                       transition: 0.5s;
+                       overflow-x: hidden;
+                       background-color: rgba(239, 196, 144, 0.834);
+                       height: 100%;
+                       width: 0;
+                }
+
+                .overlay a {
+                        text-decoration: none;
+                        font-size: 25px;
+                        color: rgb(66, 47, 66);
+                        padding: 10px;
+                        display: block;
+
+                }
+
+                .overlay a:hover, .overlay a:focus {
+                        color: rgb(36, 57, 75);
+                }
+
+                .overlay .closebtn {
+                        font-size: 57px;
+                        right: 45px;
+                        top: 20px;
+                        position: absolute;
+                }
+ 
+        </style>
+</head>
+<body>
+        <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Clients</a>
+                        <a href="#">Contact</a>
+                </div>
+              
+        </div>
+              
+        <span onclick="openNav()">open</span>
+
+        <script>
+                function openNav() {
+
+                        document.getElementById("myNav").style.width = "100%";
+                }
+
+
+                function closeNav() {
+                        document.getElementById("myNav").style.width = "0%";
+                }
+        </script>
+              
+</body>
+</html>
+
